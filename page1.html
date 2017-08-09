@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Music Vids</title>
+    
+   <link rel="stylesheet" type="text/css" href="style.css">  
+      <script src="http://code.jquery.com/jquery-latest.js"></script>
+            <script src="../jquery-1.9.0.min.js"></script>
+
+
+  </head>
+  <body>
+   <div id="button" onclick="playPause()">&#124;&#124;</div>
+                            <div id="pulse" onclick="playPause()"></div>
+
+              <div id="button2" class="1" onclick="playPause()">&#9654;&#9654;</div>
+                            <div id="pulse2" onclick="playPause()"></div>
+
+
+
+<a href="../index.html" class="go-back"><img src="../porfolio/home_icon.png" alt="home_icon" width="100" height="100"></a><p id="home" value="Collapse">Go Home</p>
+
+
+    <video width="540" height="360" id="bg" autoplay>
+      <source src="vids/Years_and_Years_Weeknds_Earned_It.webm" type="video/webm">
+      <source src="vids/Years_and_Years_Weeknds_Earned_It.mp4" type="video/mp4">
+    </video>
+    <!--<div id="fg">
+      <video width="540" height="360" id="example" controls>
+        <source src="video/example.webm" type="video/webm">
+        <source src="video/example.mp4" type="video/mp4">
+      </video>
+    </div>-->
+    
+    <script>
+    
+    var myVideo = document.getElementById('bg'); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+</script>
+    <script>
+
+    function position() {
+      var bg = document.getElementById('bg');
+      var ratio = bg.offsetWidth / bg.offsetHeight;
+      var width = window.innerWidth;
+      var height = width / ratio;
+      if (height < window.innerHeight) {
+        height = window.innerHeight;
+        width = ratio * height;
+        bg.style.marginLeft = ((window.innerWidth - width) / 2) + 'px';
+        bg.style.marginTop = 0;
+      } else {
+        bg.style.marginTop = ((window.innerHeight - height) / 2) + 'px';
+        bg.style.marginLeft = 0;
+      }
+      bg.style.width = width + 'px';
+      bg.style.height = height + 'px';
+    }
+    
+    position();
+    window.addEventListener('resize', position, false);
+    
+    </script>
+    
+    <script>
+$(document).ready(function(){
+	$("div.1").click(function(){
+		window.location.assign("page2.html");
+	});
+});
+</script>
+
+<script>
+$(document).ready(function() {
+	var $button1 = $('p#home');
+	
+$button1.mouseover(function(){
+var $home=$('p#home');
+if($home.css('height')=="0px"){
+$home.animate({height:'200px'},1000);
+$(this).attr("value","Collapse");
+}else{$home.animate({height:'0px'},1000);
+$(this).attr("value","Expand");
+}
+});
+});
+
+//fade away animation
+$(document).ready(function() {
+	var $home = $('p#home');
+	
+$home.animate({left:"500px"},2000,function(){
+alert("Animation Complete.");
+});
+$redBox.animate({width:"0px",height:"0px",opacity:"0"},3000);
+
+});
+</script>
+
+
+  </body>
+</html>

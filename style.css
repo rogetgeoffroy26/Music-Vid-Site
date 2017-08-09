@@ -1,0 +1,145 @@
+
+
+ #bg {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: #000;
+          }
+    
+    #fg {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+    }
+    
+    #button{
+          position: absolute;
+          padding: 3px;
+          left: 120px;
+      top: 60px;
+          z-index: 5;
+	  width: 40px;
+	height: 40px;
+	background: #ff0092;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;	    
+	font:2em Arial;
+	    color:white;
+	    cursor:pointer;
+	    text-align: center;
+    }
+    
+    #pulse{
+    position: absolute;
+          padding: 3px;
+          left: 100px;
+      top: 40px;
+          z-index: 4;
+	  width: 80px;
+	height: 80px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;	    
+	-webkit-animation-name: pulse1; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1.5s; /* Chrome, Safari, Opera */
+    animation-name: pulse1;
+    animation-duration: 1.5s;
+animation-iteration-count:infinite;
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse1 {
+    from {background-color: red;-ms-transform: scale(0); /* IE 9 */
+    -webkit-transform: scale(0); /* Safari */
+    transform: scale(0); /* Standard syntax */}
+
+    to {background-color: #ff0092;
+-ms-transform: scale(2); /* IE 9 */
+    -webkit-transform: scale(2); /* Safari */
+    transform: scale(2); /* Standard syntax */
+opacity:0;
+}
+	    cursor:pointer;
+
+	    }
+	    
+     #button2{
+          position: absolute;
+          padding: 3px;
+          left: 120px;
+      top: 160px;
+          z-index: 5;
+	   width: 40px;
+	height: 40px;
+	background: #00ccff;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;	    
+	font:1.2em Arial;
+	    color:white;
+	    cursor:pointer;
+	    text-align: center;
+	    cursor:pointer;
+	        line-height: 2.2;
+
+    }
+   
+#pulse2{
+    position: absolute;
+          padding: 3px;
+          left: 100px;
+      top: 140px;
+          z-index: 4;
+	  width: 80px;
+	height: 80px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;	    
+	-webkit-animation-name: pulse2; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: pulse2;
+    animation-duration: 2s;
+animation-iteration-count:infinite;
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse2 {
+    from {background-color: blue;-ms-transform: scale(0); /* IE 9 */
+    -webkit-transform: scale(0); /* Safari */
+    transform: scale(0); /* Standard syntax */}
+
+    to {background-color: #00ccff;
+-ms-transform: scale(2); /* IE 9 */
+    -webkit-transform: scale(2); /* Safari */
+    transform: scale(2); /* Standard syntax */
+opacity:0;
+}
+	    cursor:pointer;
+}
+
+
+
+/* Back Button */
+.go-back {
+	position: fixed;
+	margin-top:500px;
+	margin-left:100px;
+	text-decoration: none;
+	color: silver;
+	font-size: 3em;
+	padding: 3px;
+	z-index: 5;
+	  opacity:0.6;
+	  font-size: 4em;
+	cursor: pointer;
+}
+
+.go-back:hover {
+opacity:1;
+}
